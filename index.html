@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blockchain Technology & Cryptocurrency</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="slider-container">
+    <div class="slider" id="slider">
+      <section class="slide">
+        <h1>Introduction to Blockchain</h1>
+        <p>
+          Blockchain is a distributed, decentralized ledger technology that records transactions across multiple computers securely and transparently. It prevents data tampering and enables trustless interactions.
+        </p>
+      </section>
+      <section class="slide">
+        <h1>How Blockchain Works</h1>
+        <p>
+          Every block in a blockchain contains data, a hash of the block, and the hash of the previous block. New blocks are added through a consensus mechanism, making the chain immutable and secure.
+        </p>
+      </section>
+      <section class="slide">
+        <h1>Features of Blockchain</h1>
+        <ul>
+          <li>Decentralization</li>
+          <li>Transparency</li>
+          <li>Immutability</li>
+          <li>Security</li>
+          <li>Consensus-driven</li>
+        </ul>
+      </section>
+      <section class="slide">
+        <h1>Applications of Blockchain</h1>
+        <ul>
+          <li>Cryptocurrency (e.g., Bitcoin, Ethereum)</li>
+          <li>Supply Chain Management</li>
+          <li>Healthcare Records</li>
+          <li>Voting Systems</li>
+          <li>Smart Contracts</li>
+        </ul>
+      </section>
+      <section class="slide">
+        <h1>What is Cryptocurrency?</h1>
+        <p>
+          Cryptocurrency is a digital or virtual currency that uses cryptography for security. It operates independently of a central bank and is built on blockchain technology.
+        </p>
+      </section>
+      <section class="slide">
+        <h1>Popular Cryptocurrencies</h1>
+        <ul>
+          <li>Bitcoin (BTC)</li>
+          <li>Ethereum (ETH)</li>
+          <li>Ripple (XRP)</li>
+          <li>Litecoin (LTC)</li>
+          <li>Binance Coin (BNB)</li>
+        </ul>
+      </section>
+      <section class="slide">
+        <h1>Benefits of Cryptocurrency</h1>
+        <ul>
+          <li>Fast and secure transactions</li>
+          <li>Lower transaction fees</li>
+          <li>Global accessibility</li>
+          <li>Decentralization</li>
+        </ul>
+      </section>
+      <section class="slide">
+        <h1>Challenges and Risks</h1>
+        <ul>
+          <li>Price volatility</li>
+          <li>Lack of regulation</li>
+          <li>Security risks</li>
+          <li>Scalability issues</li>
+        </ul>
+      </section>
+      <section class="slide">
+        <h1>Future of Blockchain and Cryptocurrency</h1>
+        <p>
+          With continuous innovation, blockchain and cryptocurrency have the potential to revolutionize various industries by increasing transparency, reducing costs, and enhancing efficiency.
+        </p>
+      </section>
+      <section class="slide">
+        <h1>Conclusion</h1>
+        <p>
+          Blockchain and cryptocurrency represent a paradigm shift in digital transactions and data management. Understanding their mechanics and implications is crucial for future technological advancements.
+        </p>
+      </section>
+      <section class="slide">
+        <h1><a href="about.html">About the Creator</a></h1>
+      </section>
+    </div>
+    <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+    <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+  </div>
+
+  <script>
+    const slider = document.getElementById("slider");
+    const slides = document.querySelectorAll(".slide");
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    showSlide(currentIndex);
+  </script>
+</body>
+</html>
